@@ -10,7 +10,7 @@
 
   <parent>
   	<groupId>org.mskcc.cbio</groupId>
-  	<artifactId>cbioportal</artifactId>
+  	<artifactId>master</artifactId>
   	<version>1.4.0</version>
   </parent>
 
