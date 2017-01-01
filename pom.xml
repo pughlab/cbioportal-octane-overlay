@@ -8,11 +8,17 @@
   <packaging>war</packaging>
   <name>cBioPortal for OCTANE</name>
 
+  <parent>
+  	<groupId>org.mskcc.cbio</groupId>
+  	<artifactId>cbioportal</artifactId>
+  	<version>1.4.0</version>
+  </parent>
+
   <dependencies>
     <dependency>
       <groupId>org.mskcc.cbio</groupId>
       <artifactId>cbioportal</artifactId>
-      <version>1.3.0-SNAPSHOT</version>
+      <version>1.4.0</version>
       <type>war</type>
       <scope>runtime</scope>
     </dependency>
@@ -23,7 +29,7 @@
       <scope>runtime</scope>
     </dependency>
   </dependencies>
-  
+
   <build>
     <plugins>
       <plugin>
