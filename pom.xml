@@ -28,6 +28,11 @@
       <version>1.2.6</version>
       <scope>runtime</scope>
     </dependency>
+    <dependency>
+      <groupId>org.ebaysf.web</groupId>
+      <artifactId>cors-filter</artifactId>
+      <version>1.0.1</version>
+    </dependency>
   </dependencies>
 
   <build>
