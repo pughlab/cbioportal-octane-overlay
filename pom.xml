@@ -22,16 +22,6 @@
       <type>war</type>
       <scope>runtime</scope>
     </dependency>
-    <dependency>
-      <groupId>org.mitre</groupId>
-      <artifactId>openid-connect-client</artifactId>
-      <version>1.2.6</version>
-    </dependency>
-    <dependency>
-      <groupId>org.ebaysf.web</groupId>
-      <artifactId>cors-filter</artifactId>
-      <version>1.0.1</version>
-    </dependency>
   </dependencies>
 
   <build>
@@ -46,11 +36,22 @@
             <id>add-dependencies</id>
             <phase>prepare-package</phase>
             <goals>
-              <goal>copy-dependencies</goal>
+              <goal>copy</goal>
             </goals>
             <configuration>
-               <excludeGroupIds>org.mskcc.cbio</excludeGroupIds>
-               <outputDirectory>${project.build.directory}/${project.build.finalName}/WEB-INF/lib</outputDirectory>
+              <artifactItems>
+                <artifactItem>
+                  <groupId>org.mitre</groupId>
+                  <artifactId>openid-connect-client</artifactId>
+                  <version>1.2.6</version>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>org.ebaysf.web</groupId>
+                  <artifactId>cors-filter</artifactId>
+                  <version>1.0.1</version>
+                </artifactItem>
+              </artifactItems>
+              <outputDirectory>${project.build.directory}/${project.build.finalName}/WEB-INF/lib</outputDirectory>
             </configuration>
           </execution>
         </executions>
@@ -69,6 +70,7 @@
           </overlays>
         </configuration>
       </plugin>
+
     </plugins>
   </build>
 </project>
